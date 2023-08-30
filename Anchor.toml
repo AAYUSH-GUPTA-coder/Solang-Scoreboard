@@ -1,0 +1,18 @@
+[features]
+seeds = false
+skip-lint = false
+[programs.localnet]
+scoreboard = "F1ipperKF9EfD821ZbbYjS319LXYiBmjhzkkf5a26rC"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "/home/aayush/.config/solana/id.json"
+#  solana address -k /home/aayush/.config/solana/id.json
+#  solana-keygen new --no-bip39-passphrase -o /home/aayush/.config/solana/id.json
+#  solana config set -u localhost -k /home/aayush/.config/solana/id.json
+#  solana config get -u localhost -k /YOUR/PATH/TO/WALLET/id.json
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
